@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Levitator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <!-- MediaPipe Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+    <div id="ui-layer">
+        <h1>Architectural Levitator</h1>
+        <div id="status">Waiting for user...</div>
+        <div id="start-overlay" style="margin-top: 20px;">
+            <button id="start-btn"
+                style="padding: 10px 20px; font-size: 1.2rem; cursor: pointer; background: #a0a0ff; border: none; font-family: inherit;">ENTER
+                LEVITATOR</button>
+        </div>
+        <div class="controls">
+            <p><strong>Two-Hand Pull:</strong> Extrude Pillars</p>
+            <p><strong>Index Curve:</strong> Bend Structure</p>
+            <p><strong>Clap:</strong> Snap to Plane</p>
+        </div>
+    </div>
+    <video id="input_video" autoplay playsinline></video>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

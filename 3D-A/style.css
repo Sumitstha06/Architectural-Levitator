@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #050505;
+    font-family: 'Courier New', Courier, monospace;
+    color: #a0a0ff;
+}
+
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 10px #a0a0ff;
+}
+
+.controls {
+    margin-top: 20px;
+    background: rgba(0, 0, 20, 0.5);
+    padding: 15px;
+    border-left: 2px solid #a0a0ff;
+    pointer-events: auto;
+    /* Enable interaction if needed */
+}
+
+#start-btn {
+    pointer-events: auto;
+}
+
+.controls p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+#status {
+    color: #ffaa00;
+    font-weight: bold;
+}
+
+#input_video {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 160px;
+    /* Small frame */
+    height: 120px;
+    z-index: 100;
+    border: 2px solid #a0a0ff;
+    transform: scaleX(-1);
+    /* Mirror */
+    opacity: 0.8;
+}
